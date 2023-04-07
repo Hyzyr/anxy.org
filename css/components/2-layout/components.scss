@@ -19,37 +19,37 @@
     padding: 1.2em 1.9em;
     border-radius: 2em;
     width: 100%;
-    background-color: $white-1;
-    border: 2px solid $white-bg;
+    background-color: $white;
+    border: 2px solid $white-main;
     resize: none;
     transition: 0.3s ease-out;
 
     //font
-    color: $black-secondary;
-    font-family: $font-primary;
+    color: $black;
+    font-family: $font-main;
     font-style: normal;
     font-weight: 500;
     font-size: inherit;
     line-height: 1;
     &::placeholder {
-      color: rgba($black-secondary, 0.4);
+      color: rgba($black, 0.4);
     }
   }
   input:focus,
   textarea:focus {
-    color: $secondary;
-    border-color: rgba($black-primary, 0.8);
+    color: $main;
+    border-color: rgba($black, 0.8);
   }
   &--primary {
     input {
       background: $white;
-      border-color: rgba($black-2, 0.06);
+      border-color: rgba($black, 0.06);
       box-shadow: 0px 1em 1.3em rgba($black, 0.22);
       border-radius: 25;
       &:focus {
-        color: $secondary;
-        border-color: $secondary;
-        // background: $secondary;
+        color: $main;
+        border-color: $main;
+        // background: $main;
       }
     }
   }
@@ -60,7 +60,7 @@
       padding: 1em 0.2em;
       border-radius: 0;
       border: 0;
-      border-bottom: 1px solid $white-3;
+      border-bottom: 1px solid $white;
     }
   }
   &--select {
@@ -73,7 +73,7 @@
 
         &:hover {
           opacity: 0.8;
-          border-color: rgba($black-primary, 0.8);
+          border-color: rgba($black, 0.8);
         }
 
         &:after {
@@ -99,9 +99,9 @@
         max-height: 0;
         opacity: 0;
         overflow: hidden;
-        background-color: $white-1;
+        background-color: $white;
         border: 2px solid transparent;
-        color: $black-secondary;
+        color: $black;
         box-sizing: border-box;
         border: 2px solid transparent;
         border-radius: 0 0 2em 2em;
@@ -115,17 +115,17 @@
         &-item {
           cursor: pointer;
           padding: 0.4em 1em;
-          border-top: 1px solid rgba($black-secondary, 0.1);
+          border-top: 1px solid rgba($black, 0.1);
           transition: 0.3s ease-out;
 
           &:hover {
-            background: $white-secondary;
+            background: $white;
           }
           &:first-child {
             border-top: unset;
           }
           strong {
-            color: $black-2;
+            color: $black;
             font-weight: 500;
             pointer-events: none;
           }
@@ -140,8 +140,8 @@
       &__selected {
         color: $black;
         border-radius: 2em 2em 0 0;
-        border-bottom: 1px solid rgba($black-2, 0.1);
-        border-color: $black-primary;
+        border-bottom: 1px solid rgba($black, 0.1);
+        border-color: $black;
         transition-duration: 0.1s;
         transition-delay: 0s;
         &:after {
@@ -152,7 +152,7 @@
         top: 100%;
         max-height: 30vh;
         overflow-y: auto;
-        border-color: $black-primary;
+        border-color: $black;
         opacity: 1;
         padding: 0.5em 0 1em 0;
         transition: max-height 0.4s ease, opacity 0.2s ease;
@@ -190,7 +190,7 @@
   border: 1px solid transparent;
 
   color: $black;
-  font-family: $font-secondary;
+  font-family: $font-main;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -198,13 +198,13 @@
   transition: all 0.3s ease;
 
   &--primary {
-    background: $primary;
-    border-color: $primary;
+    background: $main;
+    border-color: $main;
     border-radius: 100px;
 
     &:hover {
       opacity: 0.8;
-      background: mix($primary, $white, 90%);
+      background: mix($main, $white, 90%);
     }
   }
   &--default {
@@ -219,12 +219,12 @@
       height: 50%;
       opacity: 0;
       border-radius: inherit;
-      background: rgba($black-secondary, 0.08);
+      background: rgba($black, 0.08);
       transform: translate(-50%, -50%);
       transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
     &:hover {
-      color: $secondary;
+      color: $main;
       &::after {
         width: 110%;
         height: 110%;
@@ -240,13 +240,13 @@
     }
   }
   &--border {
-    border-color: $black-secondary;
+    border-color: $black;
     border-radius: 100px;
 
     &:hover {
-      border-color: $secondary;
-      color: $secondary;
-      background: rgba($secondary, 0.03);
+      border-color: $main;
+      color: $main;
+      background: rgba($main, 0.03);
     }
   }
   &--iconright {
@@ -279,19 +279,19 @@
     cursor: pointer;
     padding: 1.2em 1em;
     border: 2px solid transparent;
-    background: $white-1;
+    background: $white;
     border-radius: 3em;
     gap: 0.6em;
 
     //font
-    color: $black-4;
-    font-family: $font-primary;
+    color: $black-1;
+    font-family: $font-main;
     font-style: normal;
     font-weight: 600;
     line-height: 1;
 
     &:hover {
-      border-color: rgba($black-secondary, 0.8);
+      border-color: rgba($black, 0.8);
       .custIcon {
         opacity: 1;
         width: 1em;
@@ -299,9 +299,9 @@
       }
     }
     &:active {
-      border-color: rgba($secondary, 0.8);
+      border-color: rgba($main, 0.8);
       .custIcon {
-        color: rgba($secondary, 0.8);
+        color: rgba($main, 0.8);
       }
     }
     .custIcon {
@@ -332,10 +332,10 @@
     gap: 0.5em;
     padding: 0.2em;
     &:hover {
-      color: $secondary;
+      color: $main;
     }
     &._favourite {
-      color: $red;
+      color: $black-1;
     }
   }
 }
@@ -359,12 +359,12 @@
   }
 }
 .badge {
-  background: $secondary-light;
+  background: $main;
   border-radius: 100px;
   padding: 0.3em 0.5em;
 
-  color: $black-4;
-  font-family: $font-secondary;
+  color: $black-1;
+  font-family: $font-main;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
@@ -413,8 +413,8 @@
       left: 50%;
       width: 0.25em;
       height: 0.5em;
-      border-bottom: 1.5px solid $gray;
-      border-right: 1.5px solid $gray;
+      border-bottom: 1.5px solid $white-main;
+      border-right: 1.5px solid $white-main;
       transition: 0.1s ease;
       transform: translate(-50%, -50%) rotate(45deg);
     }
@@ -425,8 +425,8 @@
     align-items: center;
 
     label {
-      color: $black-primary;
-      font-family: $font-secondary;
+      color: $black;
+      font-family: $font-main;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -549,7 +549,7 @@
       left: 50%;
       width: 2px;
       height: 100%;
-      background: $black-2;
+      background: $black;
     }
     &:before {
       transform: translate(-50%, -50%) rotate(45deg);
@@ -569,8 +569,8 @@
       left: 50%;
       width: 45%;
       height: 80%;
-      border-bottom: 2px solid $green;
-      border-right: 2px solid $green;
+      border-bottom: 2px solid $main;
+      border-right: 2px solid $main;
       transform: translate(-50%, -50%) rotate(45deg);
     }
   }
@@ -579,7 +579,7 @@
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    background: $black-2;
+    background: $black;
     transition: 0.2s ease-in;
     &:before,
     &:after {
@@ -613,7 +613,7 @@
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    background: $primary;
+    background: $main;
 
     &:after {
       top: 45%;

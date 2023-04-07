@@ -61,8 +61,8 @@
       margin: 0 auto;
 
       h2 {
-        color: $black-secondary;
-        font-family: $font-primary;
+        color: $black;
+        font-family: $font-main;
         font-style: normal;
         font-weight: 700;
         font-size: 40px;
@@ -72,8 +72,8 @@
         margin-bottom: 0.5em;
       }
       p {
-        color: $black-primary;
-        font-family: $font-secondary;
+        color: $black;
+        font-family: $font-main;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -92,7 +92,7 @@
           border-color: rgba($black, 0.6);
 
           &:focus {
-            border-color: $black-secondary;
+            border-color: $black;
           }
         }
       }

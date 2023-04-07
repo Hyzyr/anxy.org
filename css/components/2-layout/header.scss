@@ -23,7 +23,7 @@
   &.sticky {
     position: fixed;
     padding: 20px 0;
-    border-bottom: 1px solid rgba($secondary, 0.4);
+    border-bottom: 1px solid rgba($main, 0.4);
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
   }
@@ -46,7 +46,7 @@
       padding: 8px 20px;
       //font
       color: $white;
-      font-family: $font-primary;
+      font-family: $font-main;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -69,13 +69,13 @@
         left: 50%;
         height: 0;
         width: 60%;
-        background: $primary;
+        background: $main;
         opacity: 0;
         transition: 0.3s ease-out;
         transform: translateX(-50%);
       }
       &:hover {
-        color: $primary-light;
+        color: $main;
 
         &:after {
           opacity: 1;
@@ -128,7 +128,7 @@
   }
 
   &.active {
-    color: $primary;
+    color: $main;
 
     &::before {
       top: 50%;
@@ -202,7 +202,7 @@
         padding: 25px 0;
         gap: 8px;
         color: $black;
-        border-top: 1px solid $white-2;
+        border-top: 1px solid $white;
         width: 100%;
 
         &:first-child {
@@ -221,7 +221,7 @@
         }
 
         &:hover {
-          color: $secondary;
+          color: $main;
           &:after {
             width: 2px;
             height: 100%;
