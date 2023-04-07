@@ -1,0 +1,265 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(-200%, -200%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: rgba($black, 0.6);
+  backdrop-filter: blur(8px);
+  transition: 0.3s ease-out;
+  transition-property: backdrop-filter, opacity;
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    max-width: 1200px;
+    background: $white;
+    padding: 50px 80px 80px 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    animation: 0.3s zoomInCenter ease 0.2s both;
+    display: none;
+
+    &-close {
+      display: flex;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      padding: 0.2em;
+      font-size: 26px;
+      transition: 0.2s;
+
+      .custIcon {
+        font-size: inherit;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &-image {
+      width: 280px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      margin-bottom: 20px;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 640px;
+      margin: 0 auto;
+
+      h2 {
+        color: $black-secondary;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.1;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 0.5em;
+      }
+      p {
+        color: $black-primary;
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 2em;
+      }
+
+      .input {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        input {
+          border-width: 1px;
+          border-color: rgba($black, 0.6);
+
+          &:focus {
+            border-color: $black-secondary;
+          }
+        }
+      }
+    }
+    &-domains {
+      max-width: 900px;
+      margin: 0 auto;
+
+      &-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -12px -15px;
+      }
+      .button--rounded {
+        font-size: 24px;
+        margin: 12px 15px;
+        width: calc(33.3% - 30px);
+      }
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    transform: unset;
+    pointer-events: all;
+    .popup__inner {
+      display: block;
+    }
+  }
+}
+
+@mixin popup-1280 {
+  .popup {
+    &__inner {
+      &-domains {
+        .button--rounded {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@mixin popup-1160 {
+  .popup {
+    &__inner {
+      padding: 50px 50px 80px 50px;
+      &-content {
+        h2 {
+          font-size: 36px;
+        }
+
+        .input {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@mixin popup-1025 {
+  .popup {
+    &__inner {
+      &-content {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+@mixin popup-940 {
+  .popup {
+    &__inner {
+      &-content {
+        .input {
+          font-size: 16px;
+        }
+      }
+      &-domains {
+        &-row {
+          margin: -5px -10px;
+        }
+        .button--rounded {
+          font-size: 16px;
+          width: calc(33.3% - 10px);
+          margin: 10px 5px;
+        }
+      }
+    }
+  }
+}
+@mixin popup-768 {
+  .popup {
+    &__inner {
+      padding: 30px 30px 50px 30px;
+
+      &-content {
+        h2 {
+          font-size: 24px;
+
+          // font-size: 22px;
+        }
+
+        .input {
+          font-size: 14px;
+        }
+        .checkbox__outer {
+          padding: 15px 0;
+          justify-content: center;
+          label {
+            font-size: 14px;
+          }
+        }
+      }
+      &-domains {
+        &-row {
+          margin: -10px;
+        }
+        .button--rounded {
+          width: calc(50% - 20px);
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+@mixin popup-580 {
+  .popup {
+    &__inner {
+      &-content {
+        p {
+          font-size: 14px;
+        }
+      }
+      &-domains {
+        &-row {
+          margin: -5px;
+        }
+        .button--rounded {
+          font-size: 14px;
+          width: calc(50% - 10px);
+          margin: 5px;
+          padding: 0.8em 0.5em;
+          border-width: 1px;
+
+          .custIcon {
+            &::before,
+            &::after {
+              border-width: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin popup-460 {
+  .popup {
+    &__inner {
+      padding: 30px 20px 40px 20px;
+      &-domains {
+        margin: -5px -3px;
+      }
+      .button--rounded {
+        font-size: 13px;
+        width: calc(50% - 6px);
+        margin: 5px 3px;
+      }
+    }
+  }
+}
