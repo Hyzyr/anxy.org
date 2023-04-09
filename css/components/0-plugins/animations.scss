@@ -34,19 +34,6 @@
     transform: translateY(0);
   }
 }
-@keyframes sticky {
-  from {
-    opacity: 0;
-    transform: translateY(-110%);
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes animInUp {
   from {
     transform: translateY(10%) scale(0.98);

@@ -22,7 +22,7 @@ window.onclick = function (event) {
 const header = document.getElementById("header");
 if (header)
   window.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 400) {
+    if (document.documentElement.scrollTop > 20) {
       header.classList.add("sticky");
     } else {
       header.classList.remove("sticky");

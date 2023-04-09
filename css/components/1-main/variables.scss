@@ -1,8 +1,12 @@
 $white: #fff;
+$white-1: #f6f7fb;
 $white-main: #fff7f1;
+$white-bg: #f9fafb;
+
 $black: #111;
 $black-1: #22160f;
 $main: #f88d47;
+$black-main: mix($main, $black-1, 40%);
 
 $font-main: "Inter", sans-serif;
 $font-monarque: "Monarque", "serif";

@@ -25,7 +25,6 @@
   animation-duration: var(--animate-duration);
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
-  visibility: hidden;
 }
 .animate--infinite {
   -webkit-animation-iteration-count: infinite;

@@ -1,0 +1,137 @@
+.card {
+  &Book {
+    position: relative;
+    padding-bottom: 120px;
+    &__image {
+      border-radius: 20px;
+      overflow: hidden;
+      .ratioImage {
+        padding-bottom: 100%;
+      }
+    }
+    &__info {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      min-height: 116px;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateX(-50%) scale(0.8);
+      background: $white;
+      transition: all 0.2s ease-out;
+
+      font-size: 32px;
+      box-shadow: 0px 0.6em 2em rgba($black, 0.07);
+      border-radius: 0.63em;
+      padding: 0.63em 1em;
+      opacity: 0;
+
+      strong {
+        font-size: inherit;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        color: $main;
+      }
+      small {
+        color: $black-1;
+        font-size: 0.63em;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      &-ico {
+        color: $black-1;
+        font-size: 0.63em;
+        position: absolute;
+        right: 1em;
+        bottom: 0.8em;
+        width: 0.8em;
+        transition: 0.3s ease-out;
+
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0px 0.5em 1em rgba($black, 0.1);
+
+        .cardBook__info-ico {
+          color: $main;
+        }
+      }
+    }
+
+    &:hover {
+      .cardBook {
+        &__info {
+          opacity: 1;
+          transform: translateX(-50%) scale(1);
+          transition-duration: 0.6s;
+        }
+      }
+    }
+  }
+  &Review {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100%;
+    background: $white;
+    border: 1px solid rgba($black-1, 0.2);
+    padding: 40px 30px;
+    border-radius: 15px;
+
+    &__contetnt {
+      p {
+      }
+    }
+    &__user {
+      display: flex;
+      font-size: 16px;
+      gap: 1.3em;
+      border-radius: 1em;
+      padding: 1em 1.3em;
+      background: rgba($black-1, 0.04);
+
+      &-image {
+        border-radius: 50%;
+        width: 5em;
+        height: 5em;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: inherit;
+          object-fit: cover;
+        }
+      }
+      &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        strong {
+          color: $black-1;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 1.3em;
+          line-height: 1.2;
+        }
+        span {
+          color: rgba($black-1, 0.7);
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.1em;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
