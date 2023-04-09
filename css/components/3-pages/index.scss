@@ -488,6 +488,9 @@
       }
     }
   }
+  &--main {
+    background: $main;
+  }
 }
 
 @mixin index-1280 {
