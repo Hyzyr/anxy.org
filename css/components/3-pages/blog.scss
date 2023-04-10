@@ -423,10 +423,85 @@
     margin-bottom: 25px;
 
     &__image {
+      position: relative;
       width: 40%;
       flex-shrink: 0;
-      img {
-        @include fullImage;
+      font-size: 16px;
+      .ratioImage {
+        padding: unset;
+        height: 100%;
+      }
+      &-save {
+        cursor: pointer;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        width: 2.2em;
+        height: 2.2em;
+        border-radius: 50%;
+        transition: 0.3s ease-out;
+        z-index: 0;
+
+        color: $black-1;
+
+        //display
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0%;
+          top: 0%;
+          width: 100%;
+          height: 100%;
+          border-radius: inherit;
+          background: $white;
+          z-index: -1;
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 90%;
+          height: 90%;
+          background: rgba($main, 0.7);
+          border-radius: inherit;
+          transition: 0.3s ease-out;
+          transform: translate(-50%, -50%);
+          z-index: -2;
+        }
+        svg {
+          pointer-events: none;
+          width: 1em;
+          height: 1em;
+        }
+        &:hover {
+          &:after {
+            width: 110%;
+            height: 110%;
+          }
+        }
+        &:active {
+          color: $black;
+          &:after {
+            width: 120%;
+            height: 120%;
+          }
+        }
+        &.active {
+          color: $black-1;
+          &:before {
+            background: mix($main, $white, 80%);
+          }
+          &:after {
+            background: rgba($black-1, 0.4);
+          }
+        }
       }
     }
     &__content {
@@ -466,6 +541,9 @@
           line-height: 1.4;
           color: $black-2;
           margin-bottom: 16px;
+          &:last-child {
+            margin: 0;
+          }
         }
         p {
           color: $black-1;
@@ -482,6 +560,29 @@
         padding-top: 20px;
 
         border-top: 1px solid rgba($black-1, 0.1);
+      }
+    }
+    &--vertical {
+      flex-direction: column;
+
+      .blogItem {
+        &__content {
+          width: 100%;
+          &-header {
+            justify-content: space-between;
+            small {
+              border: 0;
+            }
+          }
+        }
+        &__image {
+          width: 100%;
+          .ratioImage {
+            height: unset;
+            width: 100%;
+            padding-bottom: 73%;
+          }
+        }
       }
     }
   }
@@ -744,6 +845,29 @@
     }
   }
 }
+.related {
+  padding: 100px 0;
+  &__inner {
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 12px;
+      margin: 0 -1em;
+      row-gap: 2em;
+
+      .blogItem {
+        width: calc(33.3% - 2em);
+        margin: 0 1em;
+      }
+    }
+  }
+}
 
 @mixin blog-1400 {
   .blog {
@@ -868,6 +992,23 @@
       }
     }
   }
+  .related {
+    &__inner {
+      &-row {
+        font-size: 6px;
+
+        .blogItem {
+          &__content {
+            &-body {
+              h6 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @mixin blog-940 {
   .blog {
@@ -921,6 +1062,17 @@
       }
     }
   }
+  .related {
+    padding: 60px 0 80px 0;
+    &__inner {
+      &-row {
+        font-size: 16px;
+        .blogItem {
+          width: calc(50% - 2em);
+        }
+      }
+    }
+  }
 }
 
 @mixin blog-768 {
@@ -935,7 +1087,9 @@
         align-items: center;
         overflow: hidden;
         width: 100%;
-        max-height: 280px;
+        .ratioImage {
+          padding-bottom: 55%;
+        }
       }
       &__content {
         width: 100%;
@@ -977,6 +1131,9 @@
         font-size: 12px;
       }
     }
+    &Header {
+      padding: 50px 0 20px 0;
+    }
   }
   .userData {
     font-size: 14px;
@@ -997,11 +1154,27 @@
       font-size: 14px;
     }
   }
+  .related {
+    padding: 40px 0 60px 0;
+
+    &__inner {
+      &-row {
+        font-size: 10px;
+      }
+    }
+  }
 }
 @mixin blog-580 {
   .blog {
     &Form {
       padding: 30px 15px;
+    }
+    &Item {
+      &__image {
+        .ratioImage {
+          padding-bottom: 65%;
+        }
+      }
     }
   }
   .userData {
@@ -1011,6 +1184,19 @@
     &-image {
       width: 2.6em;
       height: 2.6em;
+    }
+  }
+  .related {
+    &__inner {
+      &-row {
+        font-size: 16px;
+        margin: 0;
+        .blogItem {
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
     }
   }
 }

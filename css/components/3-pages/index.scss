@@ -68,6 +68,7 @@
 .brandSlider {
   padding: 75px 0 80px;
   background: $black-1;
+  overflow: hidden;
 
   &__inner {
     .slick {
@@ -150,6 +151,7 @@
 }
 .defaultSlider {
   padding: 140px 0;
+  overflow: hidden;
   &__inner {
     &-header {
       display: flex;
