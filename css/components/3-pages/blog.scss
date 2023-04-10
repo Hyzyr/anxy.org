@@ -489,7 +489,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
+    .badge {
+      font-size: 16px;
+    }
     small {
       border-right: 1px solid rgba($black-1, 0.1);
 
@@ -913,6 +915,11 @@
         }
       }
     }
+    &Status {
+      .badge {
+        font-size: 14px;
+      }
+    }
   }
 }
 
@@ -965,12 +972,45 @@
         }
       }
     }
+    &Status {
+      .badge {
+        font-size: 12px;
+      }
+    }
+  }
+  .userData {
+    font-size: 14px;
+    &-image {
+      width: 3em;
+      height: 3em;
+    }
+    span {
+      font-size: 14px;
+    }
+    small {
+      font-size: 12px;
+    }
+    a {
+      font-size: 14px;
+    }
+    strong {
+      font-size: 14px;
+    }
   }
 }
 @mixin blog-580 {
   .blog {
     &Form {
       padding: 30px 15px;
+    }
+  }
+  .userData {
+    font-size: 14px;
+    gap: 0.5em;
+
+    &-image {
+      width: 2.6em;
+      height: 2.6em;
     }
   }
 }

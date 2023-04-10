@@ -2612,6 +2612,9 @@ li {
           align-items: center;
   gap: 10px;
 }
+.blogStatus .badge {
+  font-size: 16px;
+}
 .blogStatus small {
   border-right: 1px solid rgba(34, 22, 15, 0.1);
   color: #22160f;
@@ -3427,6 +3430,9 @@ li {
   .blogContent__footer strong {
     width: 100%;
   }
+  .blogStatus .badge {
+    font-size: 14px;
+  }
 }
 @media (max-width: 768px) {
   .autoContainer {
@@ -3513,6 +3519,28 @@ li {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+  }
+  .blogStatus .badge {
+    font-size: 12px;
+  }
+  .userData {
+    font-size: 14px;
+  }
+  .userData-image {
+    width: 3em;
+    height: 3em;
+  }
+  .userData span {
+    font-size: 14px;
+  }
+  .userData small {
+    font-size: 12px;
+  }
+  .userData a {
+    font-size: 14px;
+  }
+  .userData strong {
+    font-size: 14px;
   }
   .hero {
     padding: 80px 0;
@@ -3654,6 +3682,14 @@ li {
   }
   .blogForm {
     padding: 30px 15px;
+  }
+  .userData {
+    font-size: 14px;
+    gap: 0.5em;
+  }
+  .userData-image {
+    width: 2.6em;
+    height: 2.6em;
   }
   .header__inner .logo {
     height: 32px;
