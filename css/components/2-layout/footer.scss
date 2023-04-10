@@ -9,6 +9,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      width: 220px;
       gap: 25px;
 
       &-social {
@@ -17,6 +18,12 @@
         margin-top: 10px;
         width: 220px;
         gap: 16px;
+      }
+      .logo {
+        width: 175px;
+        img {
+          width: 100%;
+        }
       }
     }
     &-links {
@@ -77,6 +84,100 @@
               width: 100%;
               opacity: 0.8;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin footer-940 {
+  .footer {
+    padding: 60px 0;
+
+    &__inner {
+      flex-direction: column-reverse;
+      gap: 40px;
+
+      &-info {
+        width: 100%;
+        border-top: 1px solid $white-blue;
+        padding-top: 40px;
+        gap: 16px;
+
+        &-social {
+          margin: 0 0 10px 0;
+        }
+        p {
+          order: 1;
+        }
+      }
+      &-links {
+        width: 100%;
+      }
+    }
+  }
+}
+@mixin footer-580 {
+  .footer {
+    padding: 40px 0;
+
+    &__inner {
+      flex-direction: column;
+      gap: 30px;
+
+      &-info {
+        gap: 10px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $white-blue;
+        border-top: 0;
+        padding-top: 0;
+
+        .logo {
+          width: 160px;
+          margin-bottom: 10px;
+        }
+        .iconButton {
+          font-size: 16px;
+        }
+      }
+      &-links {
+        width: 100%;
+
+        &-column {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin footer-460 {
+  .footer {
+    &__inner {
+      &-info {
+        .logo {
+          width: 150px;
+          margin-bottom: 0;
+        }
+        .iconButton {
+          font-size: 14px;
+        }
+        &-social {
+          gap: 10px;
+        }
+      }
+      &-links {
+        gap: 10px;
+        &-column {
+          gap: 12px;
+          h6 {
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+          a {
+            font-size: 12px;
           }
         }
       }

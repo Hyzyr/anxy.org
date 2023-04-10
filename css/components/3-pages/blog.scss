@@ -250,6 +250,20 @@
       display: flex;
       flex-direction: column;
       gap: 25px;
+
+      &-input {
+        .input {
+          font-size: 16px;
+          .iconButton {
+            width: 2.5em;
+            height: 2.5em;
+            svg {
+              width: 1.3em;
+              height: 1.3em;
+            }
+          }
+        }
+      }
     }
     &__categories {
       display: flex;
@@ -669,7 +683,6 @@
     }
   }
 }
-
 .userData {
   display: flex;
   align-items: center;
@@ -726,6 +739,238 @@
 
     &._light {
       font-weight: 500;
+    }
+  }
+}
+
+@mixin blog-1400 {
+  .blog {
+    &Container {
+      &__inner {
+        &-body {
+          width: calc(100% - 320px);
+        }
+        &-side {
+          width: 300px;
+        }
+      }
+    }
+    &Side {
+      &__inner {
+        gap: 20px;
+      }
+      &__categories {
+        font-size: 14px;
+      }
+      &__posts {
+        font-size: 14px;
+      }
+      &__social {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@mixin blog-1280 {
+  .blog {
+    &Side {
+      &__inner {
+        gap: 15px;
+      }
+      &__categories {
+        font-size: 10px;
+      }
+      &__posts {
+        font-size: 10px;
+      }
+      &__social {
+        font-size: 10px;
+      }
+    }
+    &Item {
+      min-height: unset;
+
+      &__content {
+        padding: 15px;
+
+        &-header {
+          font-size: 12px;
+        }
+        &-body {
+          margin-bottom: 20px;
+        }
+        &-footer {
+          padding-top: 15px;
+
+          .userData {
+            gap: 0.6em;
+            &-image {
+              width: 3em;
+              height: 3em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin blog-1160 {
+  .blog {
+    &Container {
+      &__inner {
+        flex-direction: column-reverse;
+        gap: 30px;
+
+        &-side {
+          width: 100%;
+        }
+        &-body {
+          width: 100%;
+        }
+      }
+      &--small {
+        .blog {
+          &Container {
+            &__inner {
+              flex-direction: row;
+
+              &-side {
+                width: 220px;
+              }
+              &-body {
+                width: calc(100% - 240px);
+              }
+            }
+          }
+        }
+      }
+    }
+    &Side {
+      &__categories {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+
+        h6 {
+          width: 100%;
+        }
+        a {
+          padding-right: 10px;
+          border-right: 1px solid $white-blue;
+
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin blog-940 {
+  .blog {
+    &Banner {
+      padding: 40px 0;
+    }
+    &Header {
+      &__inner {
+        &-footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          margin-top: 30px;
+        }
+      }
+    }
+    &Container {
+      padding-bottom: 80px;
+      &--small {
+        .blog {
+          &Container {
+            &__inner {
+              flex-direction: column;
+              &-side {
+                width: 100%;
+                max-width: 400px;
+                padding-top: 30px;
+                border-top: 1px solid $white-blue;
+              }
+              &-body {
+                width: 100%;
+                max-width: unset;
+                max-width: 700px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &Content {
+      &__footer {
+        flex-wrap: wrap;
+        strong {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@mixin blog-768 {
+  .blog {
+    &Container {
+      padding-bottom: 60px;
+    }
+    &Item {
+      flex-direction: column;
+      &__image {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        max-height: 280px;
+      }
+      &__content {
+        width: 100%;
+      }
+    }
+    &Side {
+      &__categories {
+        gap: 6px;
+        a {
+          padding-right: 6px;
+          border-right: 1px solid $white-blue;
+        }
+      }
+    }
+    &Form {
+      padding: 50px 30px;
+      &__inner {
+        gap: 15px;
+
+        &-group {
+          width: 100%;
+
+          .input {
+            font-size: 14px;
+          }
+        }
+        &-buttons {
+          justify-content: center;
+          gap: 10px;
+
+          .button {
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin blog-580 {
+  .blog {
+    &Form {
+      padding: 30px 15px;
     }
   }
 }

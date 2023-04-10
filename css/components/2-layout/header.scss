@@ -229,20 +229,28 @@
 
 @mixin header-1025 {
   .header {
-    padding: 25px 0;
-
     &__inner {
       justify-content: space-between;
 
-      &-logo {
-        padding-right: 20px;
-        border-right: 2px solid rgba($white, 0.27);
-        border: 0;
+      .logo {
+        height: 46px;
       }
       .burger {
         display: block;
         z-index: 2;
       }
+    }
+    &.sticky {
+      backdrop-filter: unset;
+
+      .header__inner {
+        .logo {
+          height: 40px;
+        }
+      }
+    }
+    & + section {
+      margin-top: 70px;
     }
   }
   .nav {
@@ -263,8 +271,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 35%;
-      min-width: 280px;
+      width: 60%;
+      max-width: 260px;
       height: 100%;
       flex-direction: column;
       align-items: flex-start;
@@ -278,8 +286,6 @@
       transition: 0.15s ease-in-out 0s;
 
       &-group {
-        flex-direction: column;
-        align-items: flex-start;
         padding: 25px 0;
         gap: 8px;
         color: $black;
@@ -288,6 +294,12 @@
 
         &:first-child {
           border: 0;
+        }
+
+        &._wide {
+          flex: unset;
+          flex-direction: column;
+          align-items: flex-start;
         }
       }
       &-link {
@@ -308,6 +320,16 @@
             height: 100%;
           }
         }
+        &.active {
+          color: $black;
+          &:after {
+            left: 0;
+            top: 50%;
+            width: 2px;
+            height: 80%;
+            transform: translateY(-50%);
+          }
+        }
       }
     }
 
@@ -321,6 +343,50 @@
         opacity: 1;
         transition: 0.3s ease-in-out 0.05s;
         transform: translate(0);
+      }
+    }
+  }
+}
+
+@mixin header-768 {
+  .header {
+    &__inner {
+      .logo {
+        height: 40px;
+      }
+    }
+    & + section {
+      margin-top: 64px;
+    }
+    &.sticky {
+      .header__inner {
+        .logo {
+          height: 35px;
+        }
+      }
+    }
+
+    .burger {
+      font-size: 8px;
+    }
+  }
+}
+
+@mixin header-580 {
+  .header {
+    &__inner {
+      .logo {
+        height: 32px;
+      }
+    }
+    & + section {
+      margin-top: 56px;
+    }
+    &.sticky {
+      .header__inner {
+        .logo {
+          height: 26px;
+        }
       }
     }
   }
